@@ -1,0 +1,48 @@
+{
+  "api": {
+    "require_startup_execution": true,
+    "class_name": "SBInitializeHookPlugin",
+    "modules": [
+
+    ]
+  },
+  "dependency_repository_url": [
+    "https://github.com/amitparpiyani/SBInitializePlugin"
+  ],
+  "platform": "ios",
+  "author_name": "Amit Parpiyani",
+  "author_email": "amit.parpiyani@sugarboxnetworks.com",
+  "manifest_version": "0.0.1",
+  "name": "Initialize Sugarbox",
+  "description": "This Plugin helps to initialize sugarbox on zapp app",
+  "type": "general",
+  "screen": false,
+  "identifier": "sugarbox_initialize",
+  "ui_builder_support": false,
+  "dependency_name": "SBInitializePlugin",
+  "dependency_version": "0.0.1",
+  "whitelisted_account_ids": [
+    "5cb825e102507200087bbdcc"
+  ],
+  "min_zapp_sdk": "10.5.0",
+  "deprecated_since_zapp_sdk": "",
+  "unsupported_since_zapp_sdk": "",
+  "react_native": false,
+  "custom_configuration_fields": [
+    {
+      "type": "text",
+      "key": "sdk_key",
+      "tooltip_text": "sdk key for sugarbox"
+    },
+    {
+      "type": "text",
+      "key": "partner_id",
+      "tooltip_text": "OTT Partner Id"
+    },
+    {
+      "type": "text",
+      "key": "app_version",
+      "tooltip_text": "app version of ott platform"
+    }
+  ]
+}
