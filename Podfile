@@ -7,13 +7,15 @@ source 'git@github.com:applicaster/CocoaPods.git'
 source 'git@github.com:applicaster/PluginsBuilderCocoaPods.git'
 source 'git@github.com:CocoaPods/Specs.git'
 
+
+
+
 def shared_pods
 
 end
 
 target 'SBInitializePlugin' do
     shared_pods
-    pod 'SugarBoxSDK', :git => 'git@sbgit01.sboxdc.com:iOS/SugarBoxSDK.git', :tag => '1.0.13'
     pod 'SBInitializePlugin', :path => 'SBInitializePlugin.podspec'
 end
 
