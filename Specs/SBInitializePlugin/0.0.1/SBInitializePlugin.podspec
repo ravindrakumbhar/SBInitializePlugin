@@ -26,6 +26,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'ZappGeneralPluginsSDK'
   s.dependency 'Alamofire'
-  s.dependency 'SugarBoxSDK'
 
 end

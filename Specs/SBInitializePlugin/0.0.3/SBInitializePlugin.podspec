@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SBInitializePlugin"
-  s.version           = '0.0.2'
+  s.version           = '0.0.3'
   s.summary          = "Sugarbox Initialize Plugin"
   s.description      = <<-DESC
                         InitializePlugin is a plugin that on launch integrate sugarbox.
