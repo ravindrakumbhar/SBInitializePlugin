@@ -20,7 +20,7 @@
   "identifier": "sugarbox_initialize",
   "ui_builder_support": false,
   "dependency_name": "SBInitializePlugin",
-  "dependency_version": "0.0.1",
+  "dependency_version": "0.0.2",
   "whitelisted_account_ids": [
     "5cb825e102507200087bbdcc"
   ],
