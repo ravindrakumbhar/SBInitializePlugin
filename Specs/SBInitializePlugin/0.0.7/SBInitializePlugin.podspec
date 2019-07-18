@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SBInitializePlugin"
-  s.version           = '0.0.8'
+  s.version           = '0.0.7'
   s.summary          = "Sugarbox Initialize Plugin"
   s.description      = <<-DESC
                         InitializePlugin is a plugin that on launch integrate sugarbox.
@@ -26,5 +26,4 @@ Pod::Spec.new do |s|
   s.dependency 'ZappGeneralPluginsSDK'
   s.dependency 'Alamofire'
   s.dependency 'SugarBoxSDK'
-
 end
