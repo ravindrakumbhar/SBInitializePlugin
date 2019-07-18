@@ -17,6 +17,7 @@ end
 
 target 'SBInitializePlugin' do
     shared_pods
+    pod 'SugarBoxSDK', :git => 'git@github.com:margo-networks-private-limited/SugarBoxSDK.git', :tag => '1.0.13'
     pod 'SBInitializePlugin', :path => 'SBInitializePlugin.podspec'
 end
 
