@@ -6,7 +6,8 @@ install! 'cocoapods', :deterministic_uuids => false
 source 'git@github.com:applicaster/CocoaPods.git'
 source 'git@github.com:applicaster/PluginsBuilderCocoaPods.git'
 source 'git@github.com:CocoaPods/Specs.git'
-
+source 'https://pranjalbikash_accenture:eanWgMW4BsDDKag4p9KW@bitbucket.org/zee5in/zee5loginplugin-ios.git'
+source 'git@github.com:margo-networks-private-limited/SugarBoxSDK.git'
 
 
 
@@ -16,6 +17,7 @@ end
 
 target 'SBInitializePlugin' do
     shared_pods
+    pod 'SugarBoxSDK', :git => 'git@github.com:margo-networks-private-limited/SugarBoxSDK.git', :tag => '1.0.13'
     pod 'SBInitializePlugin', :path => 'SBInitializePlugin.podspec'
 end
 
