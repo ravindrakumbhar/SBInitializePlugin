@@ -6,7 +6,7 @@ install! 'cocoapods', :deterministic_uuids => false
 source 'git@github.com:applicaster/CocoaPods.git'
 source 'git@github.com:applicaster/PluginsBuilderCocoaPods.git'
 source 'git@github.com:CocoaPods/Specs.git'
-source 'git@github.com:margo-networks-private-limited/SugarBoxSDK.git'
+source 'git@github.com:parpiyaniamit/SugarBoxSDK.git'
 
 
 
@@ -16,7 +16,7 @@ end
 
 target 'SBInitializePlugin' do
     shared_pods
-    pod 'SugarBoxSDK', :git => 'git@github.com:margo-networks-private-limited/SugarBoxSDK.git', :tag => '1.0.13'
+    pod 'SugarBoxSDK', :git => 'git@github.com:parpiyaniamit/SugarBoxSDK.git', :tag => '1.0.13'
     pod 'SBInitializePlugin', :path => 'SBInitializePlugin.podspec'
 end
 
