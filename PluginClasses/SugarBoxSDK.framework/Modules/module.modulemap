@@ -1,0 +1,11 @@
+framework module SugarBoxSDK {
+  umbrella header "SugarBoxSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module SugarBoxSDK.Swift {
+    header "SugarBoxSDK-Swift.h"
+    requires objc
+}
