@@ -20,7 +20,7 @@ import SugarBoxSDK
     public let errorMessageDialogBgColorKey = "dialog_bg_color"
     
 
-    static var context:SugarBoxContext? = nil
+    //static var context:SugarBoxContext? = nil
 
     
     
@@ -45,7 +45,7 @@ import SugarBoxSDK
         
         print("inside sugarbox plugin on launch")
        // var sdkKey = configuratio
-        context = SugarBoxContext.shared(Credentials.shared("fe40b221-4ac0-458a-bd56-33ffbe3c4b83", "3", "1", nil),nil)
+      //  context = SugarBoxContext.shared(Credentials.shared("fe40b221-4ac0-458a-bd56-33ffbe3c4b83", "3", "1", nil),nil)
 //        if let configuration = self.configurationJSON,
 //            let stringUrl = configuration[entryPointKey] as? String,
 //            !stringUrl.isEmpty,
