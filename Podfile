@@ -6,7 +6,8 @@ install! 'cocoapods', :deterministic_uuids => false
 source 'git@github.com:applicaster/CocoaPods.git'
 source 'git@github.com:applicaster/PluginsBuilderCocoaPods.git'
 source 'git@github.com:CocoaPods/Specs.git'
-source 'https://github.com/parpiyaniamit:noc@123457!/SugarBoxSDK.git'
+source 'git@github.com:parpiyaniamit/SugarBoxSDK.git'
+
 
 
 
