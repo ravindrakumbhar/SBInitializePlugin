@@ -13,8 +13,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target   = "10.0"
   s.requires_arc            = true
   s.static_framework        = true
-  s.swift_version           = '4.2'
-  s.vendored_frameworks = 'SugarBoxSDK.framework'
+  s.swift_version           = '4.2'  
 
   s.source_files  = 'PluginClasses/**/*.{swift,framework}'
   s.resources     = 'PluginClasses/**/*.xib'
@@ -27,7 +26,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'ZappGeneralPluginsSDK'
   s.dependency 'Alamofire'
-  s.dependency 'GCDWebServer'
+  s.dependency 'SugarBoxSDK', '~> 1.0.0'
 
 
 end
