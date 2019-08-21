@@ -5,10 +5,10 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                         InitializePlugin is a plugin that on launch integrate sugarbox.
                        DESC
-  s.homepage         = "https://github.com/parpiyaniamit/SBInitializePlugin"
+  s.homepage         = "https://github.com/amitparpiyani/SBInitializePlugin"
   s.license          = ''
   s.author           = { "cmps" => "amit.parpiyani@sugarboxnetworks.com" }
-  s.source           = { :git => "https://github.com/parpiyaniamit/SBInitializePlugin.git"}
+  s.source           = { :git => "https://github.com/amitparpiyani/SBInitializePlugin.git"}
   s.platform                = :ios, '10.0'
   s.ios.deployment_target   = "10.0"
   s.requires_arc            = true

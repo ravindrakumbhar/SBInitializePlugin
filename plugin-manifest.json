@@ -7,8 +7,8 @@
     ]
   },
   "dependency_repository_url": [
-    "git@github.com:parpiyaniamit/SBInitializePlugin.git",
-    "git@github.com:parpiyaniamit/SugarBoxSDK.git"
+    "git@github.com:amitparpiyani/SBInitializePlugin.git",
+    "git@github.com:margo-networks-private-limited/SugarBoxSDK.git"
   ],
   "platform": "ios",
   "author_name": "Amit Parpiyani",
