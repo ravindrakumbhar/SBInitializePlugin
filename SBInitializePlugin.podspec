@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SBInitializePlugin"
-  s.version           = '0.0.10'
+  s.version           = '0.0.12'
   s.summary          = "Sugarbox Initialize Plugin"
   s.description      = <<-DESC
                         InitializePlugin is a plugin that on launch integrate sugarbox.
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.static_framework        = true
   s.swift_version           = '4.2'  
 
-  s.source_files  = 'PluginClasses/**/*.{swift,framework}'
+  s.source_files  = 'PluginClasses/**/*.{swift}'
   s.resources     = 'PluginClasses/**/*.xib'
 
  s.framework = 'SugarBoxSDK'

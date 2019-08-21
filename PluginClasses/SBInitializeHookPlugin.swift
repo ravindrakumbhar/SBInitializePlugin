@@ -9,7 +9,43 @@
 import Foundation
 import ZappPlugins
 import SugarBoxSDK
-@objc public class SBInitializeHookPlugin : NSObject, ZPAppLoadingHookProtocol {
+
+
+@objc public class SBInitializeHookPlugin : NSObject, ZPAppLoadingHookProtocol,ConnectivityDelegates {
+    public func wifiConnected() {
+        print("Got SB Wifi")
+        let dataDict:[String: String] = ["name": "Amit"]
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SB_SSID_AVAILABLE"), object: nil, userInfo: dataDict)
+            
+        }
+    }
+    
+    public func wifiDisconnected() {
+        print("Got Disconnect")
+
+    }
+    
+    public func wifiConnectionError(_ message: String) {
+        
+    }
+    
+    public func requireAuthentication() {
+        print("Auth Required")
+        //let sessionStorageUtil = SessionStorageUtils();
+       // ZAAppConnector.sharedInstance().storageDelegate
+
+        
+    }
+    
+    public func onAuthenticationSuccess() {
+        
+    }
+    
+    public func onAuthenticationError(_ message: String) {
+        
+    }
+    
     
     //MARK: - Consts variables
     public let entryPointKey = "entry_point"
@@ -20,7 +56,7 @@ import SugarBoxSDK
     public let errorMessageDialogBgColorKey = "dialog_bg_color"
     
 
-    //static var context:SugarBoxContext? = nil
+    static var context:SugarBoxContext? = nil
 
     
     
@@ -44,24 +80,18 @@ import SugarBoxSDK
     @objc public func executeOnLaunch(completion: (() -> Void)?){
         
         print("inside sugarbox plugin on launch")
+        var sdkKey:String?
+        var partnerId:String?
+        var appVersion:String?
+        if let config = configurationJSON
+        {
+            sdkKey = config.value(forKey: "sdk_key") as? String
+            partnerId = config.value(forKey: "partner_id") as? String
+            appVersion = config.value(forKey: "app_version") as? String
+        }
        // var sdkKey = configuratio
-      //  context = SugarBoxContext.shared(Credentials.shared("fe40b221-4ac0-458a-bd56-33ffbe3c4b83", "3", "1", nil),nil)
-//        if let configuration = self.configurationJSON,
-//            let stringUrl = configuration[entryPointKey] as? String,
-//            !stringUrl.isEmpty,
-//            let url = NSURL(string: stringUrl) as URL?{
-//            sendURL(url: url, finished: { isSucceeded in
-//                if isSucceeded{                    
-//                    if self.checkValidation(){
-//                        completion?()
-//                        return
-//                    }
-//                }
-//                self.showErrorDialog()
-//            })
-//        }else{
-//            self.showErrorDialog()
-//        }
+        SBInitializeHookPlugin.context = SugarBoxContext.shared(Credentials.shared(sdkKey ?? "fe40b221-4ac0-458a-bd56-33ffbe3c4b83", partnerId ?? "3", appVersion ?? "1", nil),self)
+        completion?()
     }
     
     //MARK: - Private Methods implementation
