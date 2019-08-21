@@ -11,40 +11,8 @@ import ZappPlugins
 import SugarBoxSDK
 
 
-@objc public class SBInitializeHookPlugin : NSObject, ZPAppLoadingHookProtocol,ConnectivityDelegates {
-    public func wifiConnected() {
-        print("Got SB Wifi")
-        let dataDict:[String: String] = ["name": "Amit"]
-        DispatchQueue.main.async {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SB_SSID_AVAILABLE"), object: nil, userInfo: dataDict)
-            
-        }
-    }
+@objc public class SBInitializeHookPlugin : NSObject, ZPAppLoadingHookProtocol {
     
-    public func wifiDisconnected() {
-        print("Got Disconnect")
-
-    }
-    
-    public func wifiConnectionError(_ message: String) {
-        
-    }
-    
-    public func requireAuthentication() {
-        print("Auth Required")
-        //let sessionStorageUtil = SessionStorageUtils();
-       // ZAAppConnector.sharedInstance().storageDelegate
-
-        
-    }
-    
-    public func onAuthenticationSuccess() {
-        
-    }
-    
-    public func onAuthenticationError(_ message: String) {
-        
-    }
     
     
     //MARK: - Consts variables
