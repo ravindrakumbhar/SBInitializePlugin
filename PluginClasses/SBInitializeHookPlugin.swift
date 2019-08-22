@@ -9,9 +9,8 @@
 import Foundation
 import ZappPlugins
 import SugarBoxSDK
-
-
-@objc public class SBInitializeHookPlugin : NSObject, ZPAppLoadingHookProtocol {
+ 
+@objc public class SBInitializeHookPlugin : NSObject, ZPAppLoadingHookProtocol, ConnectivityDelegates {
     
     
     
@@ -59,6 +58,10 @@ import SugarBoxSDK
         }
        // var sdkKey = configuratio
 //        SBInitializeHookPlugin.context = SugarBoxContext.shared(Credentials.shared(sdkKey ?? "fe40b221-4ac0-458a-bd56-33ffbe3c4b83", partnerId ?? "3", appVersion ?? "1", nil),self)
+        
+          AppDelegate.context = SugarBoxContext.shared(Credentials.shared("fe40b221-4ac0-458a-bd56-33ffbe3c4b83", "3", "1", nil), self)
+        
+        
         completion?()
     }
     
@@ -135,5 +138,46 @@ import SugarBoxSDK
             return finished(false)
         }
         task.resume()
+    }
+    
+    
+    
+    func wifiConnected() {
+        
+    }
+    
+    
+    func wifiDisconnected(sessionSaving: String) {
+        
+    }
+    
+    func onAuthenticationSuccess(lifeTimeSaving: String) {
+        
+    }
+    
+    func onNearbyBeaconsFound(beacons: NSArray) {
+        
+    }
+    
+    func onDebug(message: String) {
+        
+    }
+    
+    
+    
+    func wifiConnectionError(_ message: String) {
+        print(wifiConnectionError)
+    }
+    
+    func requireAuthentication() {
+        print("requireAuthentication")
+    }
+    
+    func onAuthenticationSuccess() {
+        print("onAuthenticationSuccess")
+    }
+    
+    func onAuthenticationError(_ message: String) {
+        print("onAuthenticationError")
     }
 }
