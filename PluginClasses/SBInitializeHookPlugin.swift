@@ -58,7 +58,7 @@ import SugarBoxSDK
             appVersion = config.value(forKey: "app_version") as? String
         }
        // var sdkKey = configuratio
-//        SBInitializeHookPlugin.context = SugarBoxContext.shared(Credentials.shared(sdkKey ?? "fe40b221-4ac0-458a-bd56-33ffbe3c4b83", partnerId ?? "3", appVersion ?? "1", nil),self)
+//         SBInitializeHookPlugin.context = SugarBoxContext.shared(Credentials.shared(sdkKey ?? "fe40b221-4ac0-458a-bd56-33ffbe3c4b83", partnerId ?? "3", appVersion ?? "1", nil),self)
         completion?()
     }
     
